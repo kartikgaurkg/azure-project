@@ -10,9 +10,10 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- task: KubernetesManifest@0
+- task: Bash@3
   inputs:
-    action: 'deploy'
-    kubernetesServiceConnection: 'k8s'
-    namespace: 'default'
-    manifests: 'nginx.yml'
+    targetType: 'inline'
+    script: |
+      # Write your commands here
+      
+      echo 'Hello world'
